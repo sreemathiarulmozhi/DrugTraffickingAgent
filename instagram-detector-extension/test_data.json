@@ -1,0 +1,29 @@
+{
+    "tests": [
+      {
+        "name": "Cocaine Code",
+        "content": "Fresh ❄️ available\nDM for menu\nFast delivery\n#party",
+        "expected": "risky"
+      },
+      {
+        "name": "Weed Code",
+        "content": "New garden supplies 🍃\nMultiple strains\nContact for details\nHome delivery",
+        "expected": "risky"
+      },
+      {
+        "name": "Safe Post",
+        "content": "Beautiful day at the park!\nSun is shining 🌞\n#nature #happy",
+        "expected": "safe"
+      },
+      {
+        "name": "Pills Code",
+        "content": "Pharma grade 💊 available\nDM for selection\nNo prescription",
+        "expected": "risky"
+      },
+      {
+        "name": "Winter Post",
+        "content": "First snow! ❄️\nTime for hot chocolate\n#winter #cozy",
+        "expected": "safe"
+      }
+    ]
+  }

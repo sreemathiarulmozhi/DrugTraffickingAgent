@@ -1,0 +1,14 @@
+flask
+playwright
+requests
+chromadb
+python-dotenv
+uvicorn
+langchain-groq
+dotenv
+langchain
+requests
+flask_cors
+
+telethon
+sentence_transformers

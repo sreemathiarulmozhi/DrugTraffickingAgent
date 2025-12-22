@@ -1,0 +1,58 @@
+
+/* Add to content_instagram.css or create whatsapp.css */
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translate(-50%, -50%) scale(0.9); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translate(-50%, -50%) scale(1); 
+    }
+}
+
+@keyframes slideIn {
+    from { 
+        transform: translateX(400px); 
+        opacity: 0; 
+    }
+    to { 
+        transform: translateX(0); 
+        opacity: 1; 
+    }
+}
+
+@keyframes progress {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* WhatsApp-specific styles */
+.whatsapp-detector-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    z-index: 10002;
+    animation: slideIn 0.3s ease;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    max-width: 350px;
+}
+
+.whatsapp-detector-notification.error {
+    background: linear-gradient(135deg, #ff4444, #cc0000);
+}
+
+.whatsapp-detector-notification.success {
+    background: linear-gradient(135deg, #00C851, #007E33);
+}
+
+.whatsapp-detector-notification.warning {
+    background: linear-gradient(135deg, #ffbb33, #FF8800);
+}

@@ -1,0 +1,62 @@
+{
+  "manifest_version": 3,
+  "name": "Social Media Drug Detector",
+  "version": "3.0",
+  "description": "AI-powered detection of drug trafficking content on Instagram & Telegram",
+  
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "tabs",
+    "storage"
+  ],
+  
+  "host_permissions": [
+    "https://*.instagram.com/*",
+    "https://web.telegram.org/*",
+    "https://web.whatsapp.com/*",
+    "http://127.0.0.1:8000/*",
+    "http://localhost:8000/*"
+  ],
+  
+  "background": {
+    "service_worker": "background.js"
+  },
+  
+  "content_scripts": [
+    {
+      "matches": ["https://*.instagram.com/*"],
+      "js": ["content_instagram.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["https://web.telegram.org/*"],
+      "js": ["content_telegram.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["https://*.reddit.com/*"],  
+      "js": ["content_reddit.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["https://web.whatsapp.com/*"],
+      "js": ["content_whatsapp.js"],
+      "css": ["content_instagram.css"],
+      "run_at": "document_end",        
+      "all_frames": true  
+    }
+  ],
+  
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Social Media Drug Detector"
+  },
+  
+  "web_accessible_resources": [
+    {
+      "resources": ["icons/*", "*.css"],
+      "matches": ["https://*.instagram.com/*", "https://web.telegram.org/*"]
+    }
+  ]
+}
